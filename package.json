@@ -1,0 +1,27 @@
+{
+  "name": "zhuomarket-backend",
+  "version": "1.0.0",
+  "private": true,
+  "description": "Production REST API backend for ZhuoMarket marketplace",
+  "main": "server.js",
+  "scripts": {
+    "start": "node server.js",
+    "dev": "node --watch server.js",
+    "check": "node --check server.js && for f in config/*.js middleware/*.js routes/*.js services/*.js utils/*.js migrations/*.js; do node --check \"$f\" || exit 1; done"
+  },
+  "engines": {
+    "node": ">=20.0.0"
+  },
+  "dependencies": {
+    "bcryptjs": "2.4.3",
+    "cloudinary": "2.11.0",
+    "cors": "2.8.5",
+    "dotenv": "16.6.1",
+    "express": "4.22.3",
+    "helmet": "8.1.0",
+    "jsonwebtoken": "9.0.2",
+    "multer": "2.3.0",
+    "openai": "6.9.0",
+    "pg": "8.23.0"
+  }
+}
