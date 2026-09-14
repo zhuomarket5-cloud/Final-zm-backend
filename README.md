@@ -200,3 +200,7 @@ Le frontend fourni dans la conversation consomme notamment `/api/auth/*`, `/api/
 
 ## GitHub mobile distribution
 This version intentionally keeps the backend in a single `server.js` so GitHub mobile upload does not need folder creation. Internal config/routes/services/migrations are embedded in that file.
+
+
+### Legacy PostgreSQL schema repair
+This mobile build includes non-destructive repairs for legacy `payment_methods`, `streaming_plans`, and `streaming_orders` schemas before seed inserts. Existing data is preserved; no DROP/TRUNCATE migrations are used.
